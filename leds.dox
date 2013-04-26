@@ -1,4 +1,50 @@
 /**
  * \page page_status_leds The Status LEDs
- * Some explanation here!
+ * \section sec_leds_configuration Configuring Status LEDs
+ *
+ * To name the LEDs for later use, you create an enumeration named
+ * <b>eLED</b> in your configuration header. The last entry shall always
+ * be <c>NUM_OF_LEDS</c> to define the end of the enumeration. The
+ * numbering needs to be continuously done, so that it can be used as
+ * loop count also.
+ *
+ * The next step is to define the port pins to use with the LEDs. This
+ * definition, named <b>P_LEDS</b>, correlates to the enumeration above.
+ *
+ * See leds_config_example.h for the look of it.
+ *
+ * \section sec_leds_usage Using the LEDs
+ *
+ * After initializing the port pins, the usage is easy enough. Just call
+ * the method you want with the LED name as parameter.
+ *
+ * \note All LEDs are connected using the port pins as output.
+ *
+ * Example:
+ * \code
+ * #include "modules/leds/leds.h"
+ *
+ * int main(void)
+ * {
+ *    // initialize the port pins
+ *    led_init();
+ *
+ *    // switch all leds off
+ *    led_all_off();
+ *
+ *    // switch led on
+ *    led_on(myFavoriteLed);
+ *
+ *    // toggle led
+ *    led_toggle(myOtherFavoriteLed);
+ *
+ *    // switch led off
+ *    led_off(myFavoriteLed);
+ *
+ *    // switch all on
+ *    led_all_on();
+ *
+ *    return 0;
+ * }
+ * \endcode
  */
