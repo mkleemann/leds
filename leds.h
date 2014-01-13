@@ -23,7 +23,7 @@
 #ifndef LEDS_H_
 #define LEDS_H_
 
-#include "../config/leds_config.h"
+#include "config/leds_config.h"
 
 /***************************************************************************/
 /* PROTOTYPES                                                              */
