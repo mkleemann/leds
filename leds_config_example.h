@@ -25,7 +25,6 @@
 #define LEDS_CONFIG_H_
 
 /**
- * \enum eLED
  * \brief define LEDs connected to your controller
  *
  * Name them as you wish, but keep in mind that it matches the
