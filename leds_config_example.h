@@ -32,18 +32,12 @@
  */
 typedef enum
 {
-   //! error on CAN1
-   errCan1LED  = 0,
-   //! error on CAN2
-   errCan2LED  = 1,
-   //! tx traffic on CAN2
-   txCan2LED   = 2,
-   //! rx traffic on CAN1
-   rxCan1LED   = 3,
-   //! status LED for run/sleep mode
-   sleepLed    = 4,
-   //! maximum number of LEDs
-   NUM_OF_LEDS = 5         // always the last one
+   //! example LED #1
+   exampleLED1 = 0,
+   //! example LED #2
+   exampleLED2 = 1,
+   //! maximum number of example LEDs
+   NUM_OF_LEDS = 2         // always the last one
 } eLED;
 
 /**
@@ -54,9 +48,6 @@ typedef enum
  *       correspond to the type definition of ledType in leds.h.
  */
 #define P_LEDS    SET_PORT_PTR(C,1), \
-                  SET_PORT_PTR(C,2), \
-                  SET_PORT_PTR(C,3), \
-                  SET_PORT_PTR(C,4), \
                   SET_PORT_PTR(C,5)
 
 #endif /* LEDS_CONFIG_H_ */
